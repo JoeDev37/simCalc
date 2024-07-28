@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Danfo&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Jaro:opsz@6..72&family=Lilita+One&family=Poetsen+One&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Seymour+One&display=swap');
+
+$bgCountainer: #181926;
+$bgChild: #24273a;
+$border: 10px;
+$colours: #b4befe;
+$bgBtn: #f5a97f;
+$clearBtn: #e64553;
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: $bgCountainer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child {
+    background-color: $bgChild;
+    width: 30%;
+    height: 70%;
+    border-radius: $border;
+    padding: 10px;
+}
+
+input {
+    width: 100%;
+    height: 10%;
+    border-radius: $border;
+    outline: none;
+    border: none;
+    font-size: 40;
+    padding: 30px 10px;
+    background-color: $bgCountainer;
+    color: $colours;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    user-select: none;
+}
+
+.sec_child {
+    width: 100%;
+    height: 80%;
+    margin-top: 30px;
+    border-radius: $border;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 0.5rem;
+}
+
+button {
+    background-color: $bgCountainer;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    opacity: 0.7;
+    transition: all .15s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+#numbers {
+    border: none;
+    border-radius: 10px;
+    font-size: 40px;
+    color: $colours;
+}
+
+#operator {
+    @extend #numbers;
+    background-color: $bgBtn;
+    color: $bgCountainer;
+}
+
+#equal {
+    @extend #numbers;
+    background-color: $colours;
+    color: $bgChild;
+}
+
+.lastAdded {
+    display: flex;
+    height: 50px;
+
+    button {
+        background-color: $clearBtn;
+        width: 13%;
+        height: 90%;
+        border-radius: 50%;
+        margin-top: 7px;
+        border: none;
+        margin-left: 10px;
+        font-weight: 900;
+    }
+
+    button:hover {
+        border-radius: 10px;
+    }
+}
